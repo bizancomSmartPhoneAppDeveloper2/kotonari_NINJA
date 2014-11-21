@@ -1,25 +1,23 @@
 //
-//  sentakuviewController.m
+//  prolog prologeViewController.m
 //  ninzya
 //
-//  Created by 吉岡誠史 on 2014/11/20.
+//  Created by ビザンコムマック　13 on 2014/11/22.
 //  Copyright (c) 2014年 xxx. All rights reserved.
 //
 
-#import "sentakuviewController.h"
+#import "prolog prologeViewController.h"
 
-@interface sentakuviewController ()
+@interface prolog_prologeViewController ()
 
 @end
 
-@implementation sentakuviewController{
-    AppDelegate *app; //変数管理
+@implementation prolog_prologeViewController{
+    int i;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    app = [[UIApplication sharedApplication] delegate]; //変数管理のデリゲート
-
     // Do any additional setup after loading the view.
 }
 
@@ -38,18 +36,13 @@
 }
 */
 
-- (IBAction)syokyu:(id)sender {
-    app.cleartime = 100;
-    app.kaihi = 2;
-}
-
-- (IBAction)tyukyu:(id)sender {
-    app.cleartime = 1000;
-    app.kaihi = 4;
-}
-
-- (IBAction)zyokyu:(id)sender {
-    app.cleartime = 10000;
-    app.kaihi = 6;
+- (IBAction)nextBtn:(UIButton *)sender {
+    if(i<1){
+        //背景を説明画像に差し替える
+//        self.XXXXView.image = [UIImage imageNamed:@"XXXXX.png"];
+        i++;
+    }else{
+    [self performSegueWithIdentifier:@"prologueToSentaku" sender:self]; //選択画面に移動するセグエ
+    }
 }
 @end

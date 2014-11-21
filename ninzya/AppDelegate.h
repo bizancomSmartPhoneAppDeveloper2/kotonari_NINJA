@@ -22,12 +22,12 @@
 
 @property int point;
 @property int time;
-@property int item;
+//@property int item;
 @property int kaihi;
-@property BOOL hiddenitem;
-@property NSMutableArray *nowProject;
-@property NSMutableArray *finishProject;
+//@property BOOL hiddenitem;
+//@property NSMutableArray *nowProject;
+//@property NSMutableArray *finishProject;
 @property int cleartime;
-@property int srand;
+//@property int srand;
 @end
 

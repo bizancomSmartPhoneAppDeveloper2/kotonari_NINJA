@@ -86,7 +86,7 @@
                                                             name:UIDeviceProximityStateDidChangeNotification object:nil];
         
             //見つかった見つからない判定（viewDidLoadで発生させた乱数を元に）
-                if(random > 5){
+                if(random >= app.kaihi){
                     //成功（見つからなかった）
                     NSLog(@"成功した");
                     [self performSegueWithIdentifier:@"kaihi" sender:self]; //成功画面に移動するセグエ

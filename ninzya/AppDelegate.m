@@ -123,15 +123,5 @@
         }
     }
 }
--(void)defaultClear{
-    
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSNumber *num = [NSNumber numberWithInt:_time];
-    [defaults setObject:num forKey:@"経過時間"];
-    num = [NSNumber numberWithInt:_point];
-    [defaults setObject:num forKey:@"ポイント"];
-    
-}
 
-
-@end
+    @end

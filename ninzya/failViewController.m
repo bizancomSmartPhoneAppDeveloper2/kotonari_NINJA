@@ -1,25 +1,21 @@
 //
-//  sentakuviewController.m
+//  failViewController.m
 //  ninzya
 //
-//  Created by 吉岡誠史 on 2014/11/20.
+//  Created by ビザンコムマック　13 on 2014/11/22.
 //  Copyright (c) 2014年 xxx. All rights reserved.
 //
 
-#import "sentakuviewController.h"
+#import "failViewController.h"
 
-@interface sentakuviewController ()
+@interface failViewController ()
 
 @end
 
-@implementation sentakuviewController{
-    AppDelegate *app; //変数管理
-}
+@implementation failViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    app = [[UIApplication sharedApplication] delegate]; //変数管理のデリゲート
-
     // Do any additional setup after loading the view.
 }
 
@@ -38,18 +34,4 @@
 }
 */
 
-- (IBAction)syokyu:(id)sender {
-    app.cleartime = 100;
-    app.kaihi = 2;
-}
-
-- (IBAction)tyukyu:(id)sender {
-    app.cleartime = 1000;
-    app.kaihi = 4;
-}
-
-- (IBAction)zyokyu:(id)sender {
-    app.cleartime = 10000;
-    app.kaihi = 6;
-}
 @end

@@ -30,7 +30,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="5pf-dr-yOb" kind="show" id="TmO-z5-0wq"/>
+                                    <segue destination="JdI-nn-NRC" kind="presentation" id="uRU-qZ-UlO"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -40,7 +40,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="612" y="387"/>
+            <point key="canvasLocation" x="424" y="387"/>
         </scene>
         <!--Kaihi View Controller-->
         <scene sceneID="mDO-FH-50B">
@@ -79,7 +79,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TqG-gO-dqy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1859" y="-510"/>
+            <point key="canvasLocation" x="1803" y="-460"/>
         </scene>
         <!--Seikou View Controller-->
         <scene sceneID="tWb-Db-fx3">
@@ -94,12 +94,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4AB-Dl-ofS">
-                                <rect key="frame" x="137" y="280" width="60" height="30"/>
-                                <state key="normal" title="次の任務">
+                                <rect key="frame" x="108" y="269" width="105" height="30"/>
+                                <state key="normal" title="タイトルに戻る">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="GnH-TG-hrw" kind="presentation" animates="NO" id="MRS-qw-EBp"/>
+                                    <segue destination="vXZ-lx-hvc" kind="presentation" id="4Hh-TK-hzH"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -109,7 +109,43 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qyh-un-paA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2262" y="-398"/>
+            <point key="canvasLocation" x="2232" y="-460"/>
+        </scene>
+        <!--Prolog prologe View Controller-->
+        <scene sceneID="2Hn-Hr-UG4">
+            <objects>
+                <viewController id="JdI-nn-NRC" customClass="prolog_prologeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ore-Wp-UfN"/>
+                        <viewControllerLayoutGuide type="bottom" id="sBT-dP-0UX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yc8-KL-NMR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kox-MV-hYk">
+                                <rect key="frame" x="144" y="269" width="32" height="30"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextBtn:" destination="JdI-nn-NRC" eventType="touchUpInside" id="L32-rm-63o"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PoT-Za-vJN">
+                                <rect key="frame" x="40" y="113" width="240" height="128"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <segue destination="5pf-dr-yOb" kind="presentation" identifier="prologueToSentaku" id="Wdz-P0-5gb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fc3-4v-KGc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="836" y="387"/>
         </scene>
         <!--Syokyu View Controller-->
         <scene sceneID="S1e-h7-6eV">
@@ -172,7 +208,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4PN-Gw-UVl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1557" y="387"/>
+            <point key="canvasLocation" x="1661" y="387"/>
         </scene>
         <!--Item View Controller-->
         <scene sceneID="jLk-ie-kv1">
@@ -253,10 +289,10 @@
             </objects>
             <point key="canvasLocation" x="2460" y="814"/>
         </scene>
-        <!--View Controller-->
+        <!--Fail View Controller-->
         <scene sceneID="He3-el-Cps">
             <objects>
-                <viewController id="VPc-7z-4xx" sceneMemberID="viewController">
+                <viewController id="VPc-7z-4xx" customClass="failViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sEZ-XA-eg5"/>
                         <viewControllerLayoutGuide type="bottom" id="Pfn-qS-sja"/>
@@ -289,7 +325,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TbR-7p-aNQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1878" y="1166"/>
+            <point key="canvasLocation" x="1611" y="1188"/>
         </scene>
         <!--Sentakuview Controller-->
         <scene sceneID="Gy6-wp-hRK">
@@ -312,7 +348,7 @@
                                 </state>
                                 <connections>
                                     <action selector="tyukyu:" destination="5pf-dr-yOb" eventType="touchUpInside" id="vdf-nv-dt2"/>
-                                    <segue destination="GnH-TG-hrw" kind="show" id="3lw-mg-V2A"/>
+                                    <segue destination="GnH-TG-hrw" kind="presentation" id="VPm-Pi-wOP"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ph-JE-EIc">
@@ -324,7 +360,7 @@
                                 </state>
                                 <connections>
                                     <action selector="zyokyu:" destination="5pf-dr-yOb" eventType="touchUpInside" id="P4R-BI-P2a"/>
-                                    <segue destination="GnH-TG-hrw" kind="show" id="VdI-vX-PGY"/>
+                                    <segue destination="GnH-TG-hrw" kind="presentation" id="GN0-N5-tvy"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dlm-6C-c0a" colorLabel="IBBuiltInLabel-Red">
@@ -336,19 +372,20 @@
                                 </state>
                                 <connections>
                                     <action selector="syokyu:" destination="5pf-dr-yOb" eventType="touchUpInside" id="yF6-1h-TDh"/>
-                                    <segue destination="GnH-TG-hrw" kind="show" id="mZo-iE-HJj"/>
+                                    <segue destination="GnH-TG-hrw" kind="presentation" id="7wL-RB-zGS"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zcc-Gs-6ru" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1129" y="387"/>
+            <point key="canvasLocation" x="1238" y="387"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="mZo-iE-HJj"/>
+        <segue reference="VPm-Pi-wOP"/>
     </inferredMetricsTieBreakers>
 </document>

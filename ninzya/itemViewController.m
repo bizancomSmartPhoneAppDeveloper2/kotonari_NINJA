@@ -103,6 +103,7 @@
         if(app.point >= 10){
             //ポイントが減ってアイテムの効果がプラスされる
             app.point = app.point - 10;
+            app.kaihi = 0;
             
             UIAlertView *alert = [[UIAlertView alloc]
                                   initWithTitle:@"隠れ身の術！"
