@@ -155,6 +155,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="itemBtn:" destination="GnH-TG-hrw" eventType="touchUpInside" id="FRI-qI-OYT"/>
                                     <segue destination="qlD-wp-RGk" kind="show" identifier="" id="lf1-HE-vgm"/>
                                 </connections>
                             </button>
@@ -192,65 +193,63 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="GnH-TG-hrw" kind="show" id="Rf5-Uu-pYI"/>
+                                    <segue destination="XOs-4h-pMm" kind="unwind" unwindAction="returnSyokyu:" id="MEw-Mz-tWU"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DH2-iX-g2W">
-                                <rect key="frame" x="136" y="404" width="80" height="80"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r6Z-Y2-FYZ">
+                                <rect key="frame" x="38" y="473" width="38" height="30"/>
+                                <state key="normal" title="item1">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="item1btn:" destination="qlD-wp-RGk" eventType="touchUpInside" id="s2G-EB-jpb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X3C-su-jBs">
+                                <rect key="frame" x="141" y="473" width="38" height="30"/>
+                                <state key="normal" title="item2">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="item2btn:" destination="qlD-wp-RGk" eventType="touchUpInside" id="Cjk-0f-etw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Asz-iP-CZ4">
+                                <rect key="frame" x="242" y="473" width="38" height="30"/>
+                                <state key="normal" title="item3">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="item3btn:" destination="qlD-wp-RGk" eventType="touchUpInside" id="VGb-QW-jff"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="59Q-m8-nxl">
+                                <rect key="frame" x="145" y="392" width="30" height="30"/>
                                 <state key="normal" title="使う">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="buttonFadeInOut2:" destination="qlD-wp-RGk" eventType="touchUpInside" id="bfO-vP-doq"/>
+                                    <action selector="itemUsebtn:" destination="qlD-wp-RGk" eventType="touchUpInside" id="wID-X6-7F4"/>
+                                    <segue destination="XOs-4h-pMm" kind="unwind" unwindAction="returnSyokyu:" id="lOl-aR-V0J"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xTK-hG-OhZ">
-                                <rect key="frame" x="224" y="404" width="80" height="80"/>
-                                <state key="normal" title="使う">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="buttonFadeInOut3:" destination="qlD-wp-RGk" eventType="touchUpInside" id="0Cm-Xd-7na"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cbs-ET-DUD">
-                                <rect key="frame" x="27" y="404" width="80" height="80"/>
-                                <state key="normal" title="使う">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="buttonFadeInOut:" destination="qlD-wp-RGk" eventType="touchUpInside" id="Jd7-6y-taB"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u2y-j6-HmV">
-                                <rect key="frame" x="120" y="342" width="80" height="54"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="useitem:" destination="qlD-wp-RGk" eventType="touchUpInside" id="fWU-ZJ-nQD"/>
-                                    <segue destination="GnH-TG-hrw" kind="show" identifier="itemsegue" id="O5d-WV-1z9"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f0r-7T-oTk">
-                                <rect key="frame" x="40" y="178" width="240" height="128"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vBt-Px-9eH">
+                                <rect key="frame" x="40" y="131" width="240" height="228"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="sampleButton" destination="Cbs-ET-DUD" id="3IH-rr-O42"/>
-                        <outlet property="sampleButton2" destination="DH2-iX-g2W" id="neE-X1-0pR"/>
-                        <outlet property="sampleButton3" destination="xTK-hG-OhZ" id="pdD-Qi-bR6"/>
-                        <outlet property="sampleImageView" destination="f0r-7T-oTk" id="d3K-AD-pin"/>
-                        <outlet property="usebtn" destination="u2y-j6-HmV" id="IKX-nU-sRb"/>
+                        <outlet property="item1btn" destination="r6Z-Y2-FYZ" id="Nu1-GO-2o7"/>
+                        <outlet property="item2btn" destination="X3C-su-jBs" id="ZXw-B0-cqW"/>
+                        <outlet property="item3btn" destination="Asz-iP-CZ4" id="GOr-fc-Li1"/>
+                        <outlet property="itemImageVIew" destination="vBt-Px-9eH" id="kT4-eQ-ACj"/>
+                        <outlet property="itemUsebtn" destination="59Q-m8-nxl" id="vjx-iu-EYV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bKE-Ty-zKB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="XOs-4h-pMm" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2460" y="814"/>
         </scene>
@@ -350,6 +349,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Rf5-Uu-pYI"/>
+        <segue reference="mZo-iE-HJj"/>
     </inferredMetricsTieBreakers>
 </document>

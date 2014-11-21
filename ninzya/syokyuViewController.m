@@ -117,8 +117,19 @@
 
 //アイテム画面に移動するボタン
 - (IBAction)itemBtn:(UIButton *)sender {
-//    [self stopSensor];
+    // 近接センサオフ
+    [UIDevice currentDevice].proximityMonitoringEnabled = NO;
+    // 近接センサ監視解除
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:UIDeviceProximityStateDidChangeNotification object:nil];
 }
+
+//戻ってくるボタンのためにSegueを設定
+- (IBAction)returnSyokyu:(UIStoryboardSegue *)segue {
+    NSLog(@"攻略画面に戻る");
+    [self viewDidLoad];
+}
+
 @end
 
 

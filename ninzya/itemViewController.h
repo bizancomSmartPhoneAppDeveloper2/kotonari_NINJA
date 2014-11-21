@@ -9,23 +9,16 @@
 #import <UIKit/UIKit.h>
 
 @interface itemViewController : UIViewController
-{
-BOOL isFadeIn;
-BOOL isFadeIn2;
-BOOL isFadeIn3;
-}
 
-@property (weak, nonatomic) IBOutlet UIButton *sampleButton;
-@property (weak, nonatomic) IBOutlet UIButton *sampleButton2;
-@property (weak, nonatomic) IBOutlet UIButton *sampleButton3;
 
-//アイテムを使うためのボタン
-@property (weak, nonatomic) IBOutlet UIButton *usebtn;
+@property (weak, nonatomic) IBOutlet UIButton *item1btn;
+@property (weak, nonatomic) IBOutlet UIButton *item2btn;
+@property (weak, nonatomic) IBOutlet UIButton *item3btn;
 
-//アイテムに関する説明が表示されるイメージビュー
-@property (weak, nonatomic) IBOutlet UIImageView *sampleImageView;
+//item使うボタン
+@property (weak, nonatomic) IBOutlet UIButton *itemUsebtn;
 
-- (IBAction)buttonFadeInOut:(id)sender;
-- (IBAction)useitem:(id)sender;
+//アイテムの画像表示ビュー
+@property (weak, nonatomic) IBOutlet UIImageView *itemImageVIew;
 
 @end

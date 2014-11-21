@@ -14,153 +14,119 @@
 
 @implementation itemViewController{
     AppDelegate *app; //変数管理
-    BOOL item1;
-    BOOL item2;
-    BOOL item3;
+    int itemselect;
 }
 
 
 - (void)viewDidLoad
     {
-        [super viewDidLoad];
         app = [[UIApplication sharedApplication] delegate]; //変数管理のデリゲート
-        isFadeIn = YES;
-        isFadeIn2 = YES;
-        isFadeIn3 = YES;
-        self.usebtn.hidden = YES;
-        //画像を隠す
-        self.sampleImageView.hidden =YES;
-    }
-    
-    - (void)didReceiveMemoryWarning
-    {
-        [super didReceiveMemoryWarning];
-    }
-    
-    - (IBAction)buttonFadeInOut:(id)sender {
-        if ([_sampleButton.titleLabel.text isEqualToString:@"使う"]) {
-            //画像を表示する
-            self.sampleImageView.image = [UIImage imageNamed:@"images.jpg"];
-            //フェードイン
-            _sampleImageView.alpha = 0;
-            //アニメーションのタイプを指定
-            [UIView beginAnimations:@"使う" context:nil];
-            //イージング指定
-            [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
-            //アニメーション秒数を指定
-            [UIView setAnimationDuration:0.3];
-            //目標のアルファ値を指定
-            _sampleImageView.alpha = 1;
-            //アニメーション実行
-            [UIView commitAnimations];
-            //ボタンのテキストを変更
-            [_sampleButton setTitle:@"戻る" forState:UIControlStateNormal];
-            [_sampleButton2 setTitle:@"使う" forState:UIControlStateNormal];
-            [_sampleButton3 setTitle:@"使う" forState:UIControlStateNormal];
-            
-            
-            //画像を隠す
-            self.sampleImageView.hidden =NO;
-            self.usebtn.hidden = NO;
-            
-        }else{
-            self.sampleImageView.hidden = YES;
-            self.usebtn.hidden = YES;
-            [self.sampleButton  setTitle:@"使う" forState:UIControlStateNormal];
-        }
-    }
-
-- (IBAction)useitem:(id)sender {
-    NSLog(@"アイテム使う");
-    if (item1) {
-
         
-    }else if(item2){
-        NSLog(@"アイテム２");
+        [super viewDidLoad];
+        //アイテムを使うボタンと画像は隠しておく
+        self.itemUsebtn.hidden = YES;
+        self.itemImageVIew.hidden =YES;
+        
+        NSLog(@"選択中のアイテムは%d",itemselect);
+    }
+    
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+}
 
-    }else if (item3){
-        NSLog(@"アイテム３");
+//item1のボタン
+- (IBAction)item1btn:(UIButton *)sender {
+    itemselect = 1;
+    //アイテム使用ボタンを表示し、イメージビューにアイテム１の画像を表示
+    self.itemUsebtn.hidden = NO;
+    self.itemImageVIew.hidden =NO;
+    self.itemImageVIew.image = [UIImage imageNamed:@"image1.jpg"];
+}
 
+//item2のボタン
+- (IBAction)item2btn:(UIButton *)sender {
+    itemselect = 2;
+    self.itemUsebtn.hidden = NO;
+    self.itemImageVIew.hidden =NO;
+    self.itemImageVIew.image = [UIImage imageNamed:@"image2.jpg"];
+}
+
+//item3のボタン
+- (IBAction)item3btn:(UIButton *)sender {
+    itemselect = 3;
+    self.itemUsebtn.hidden = NO;
+    self.itemImageVIew.hidden =NO;
+    self.itemImageVIew.image = [UIImage imageNamed:@"image3.jpg"];
+}
+
+//item使用ボタン
+- (IBAction)itemUsebtn:(UIButton *)sender {
+    if(itemselect == 1){
+        NSLog(@"アイテム1を使った");
+        if(app.point >= 10){
+            //ポイントが減ってアイテムの効果がプラスされる
+            app.point = app.point - 10;
+            
+            //アイテムを使用したことを告げるアラートが表示される
+            UIAlertView *alert = [[UIAlertView alloc]
+                                  initWithTitle:@"分身の術！"
+                                  message:@"\n攻略時間が半分になった！"
+                                  delegate:self
+                                  cancelButtonTitle:@"OK"
+                                  otherButtonTitles:nil];
+            [alert show];
+        }else{
+            //アラートを出す
+            [self alert];
+        }
+    }else if(itemselect == 2){
+        NSLog(@"アイテム2を使った");
+        if(app.point >= 10){
+            //ポイントが減ってアイテムの効果がプラスされる
+            app.point = app.point - 10;
+            
+            //アイテムを使用したことを告げるアラートが表示される
+            UIAlertView *alert = [[UIAlertView alloc]
+                                  initWithTitle:@"錬金の術！"
+                                  message:@"\n時間あたりの獲得ポイントが倍増！"
+                                  delegate:self
+                                  cancelButtonTitle:@"OK"
+                                  otherButtonTitles:nil];
+            [alert show];
+        }else{
+            //アラートを出す
+            [self alert];
+        }
+    }else if(itemselect == 3){
+        NSLog(@"アイテム3を使った");
+        if(app.point >= 10){
+            //ポイントが減ってアイテムの効果がプラスされる
+            app.point = app.point - 10;
+            
+            UIAlertView *alert = [[UIAlertView alloc]
+                                  initWithTitle:@"隠れ身の術！"
+                                  message:@"\n敵に発見される危険性がなくなった！"
+                                  delegate:self
+                                  cancelButtonTitle:@"OK"
+                                  otherButtonTitles:nil];
+            [alert show];
+        }else{
+            //アラートを出す
+            [self alert];
+        }
     }
 }
-    
-    - (IBAction)buttonFadeInOut2:(id)sender {
-         if ([_sampleButton2.titleLabel.text isEqualToString:@"使う"]) {
-            //画像を表示する
-            self.sampleImageView.image = [UIImage imageNamed:@"images-2.jpg"];
-            //フェードイン
-            _sampleImageView.alpha = 0;
-            //アニメーションのタイプを指定
-            [UIView beginAnimations:@"使う" context:nil];
-            //イージング指定
-            [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
-            //アニメーション秒数を指定
-            [UIView setAnimationDuration:0.3];
-            //目標のアルファ値を指定
-            _sampleImageView.alpha = 1;
-            //アニメーション実行
-            [UIView commitAnimations];
-            //ボタンのテキストを変更
-            [_sampleButton2 setTitle:@"戻る" forState:UIControlStateNormal];
-            [_sampleButton setTitle:@"使う" forState:UIControlStateNormal];
-            [_sampleButton3 setTitle:@"使う" forState:UIControlStateNormal];
 
-        self.sampleImageView.hidden =NO;
-             self.usebtn.hidden = NO;
-         }
-         else{
-             self.sampleImageView.hidden = YES;
-             self.usebtn.hidden = YES;
-             [self.sampleButton2  setTitle:@"使う" forState:UIControlStateNormal];
-         }
-    }
-    - (IBAction)buttonFadeInOut3:(id)sender {
-        if ([_sampleButton3.titleLabel.text isEqualToString:@"使う"]) {
-            //画像を表示する
-            self.sampleImageView.image = [UIImage imageNamed:@"images-1.jpg"];
-            //フェードイン
-            _sampleImageView.alpha = 0;
-            //アニメーションのタイプを指定
-            [UIView beginAnimations:@"使う" context:nil];
-            //イージング指定
-            [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
-            //アニメーション秒数を指定
-            [UIView setAnimationDuration:0.3];
-            //目標のアルファ値を指定
-            _sampleImageView.alpha = 1;
-            //アニメーション実行
-            [UIView commitAnimations];
-            //ボタンのテキストを変更
-            [_sampleButton3 setTitle:@"戻る" forState:UIControlStateNormal];
-            [_sampleButton2 setTitle:@"使う" forState:UIControlStateNormal];
-            [_sampleButton setTitle:@"使う" forState:UIControlStateNormal];
-            self.usebtn.hidden = NO;
-        self.sampleImageView.hidden =NO;
-        }else{
-            self.sampleImageView.hidden = YES;
-            self.usebtn.hidden = YES;
-            [self.sampleButton3  setTitle:@"使う" forState:UIControlStateNormal];
-        }
-    }
 
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    if ([segue.identifier isEqualToString:@"itemsegue"]) {
-        if (item1) {
-            app.point = 3 * app.point;
-            NSLog(@"アイテム１を使った");
-
-        }else if(item2){
-            app.time = app.time - 10;
-            if (app.time < 0) {
-                app.time = 0;
-                NSLog(@"アイテム2を使った");
-
-            }
-        }else if (item3){
-            app.kaihi = app.kaihi  + 2;
-            NSLog(@"アイテム3を使った");
-
-        }
-    }
+//ポイントが足りない時のアラートのメソッド
+-(void)alert{
+    UIAlertView *alert = [[UIAlertView alloc]
+                          initWithTitle:@"ポイントが足りません"
+                          message:@"\nアイテムを使用するためのポイントが足りません"
+                          delegate:self
+                          cancelButtonTitle:@"OK"
+                          otherButtonTitles:nil];
+    [alert show];
 }
 @end
