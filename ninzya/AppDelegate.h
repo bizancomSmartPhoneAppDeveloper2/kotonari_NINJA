@@ -29,5 +29,7 @@
 //@property NSMutableArray *finishProject;
 @property int cleartime;
 //@property int srand;
+
+@property int level; //初級=1、中級=2、上級=3
 @end
 

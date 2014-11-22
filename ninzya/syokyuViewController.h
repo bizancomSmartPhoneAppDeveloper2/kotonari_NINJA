@@ -12,4 +12,8 @@
 
 @interface syokyuViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIImageView *backImageView;
+
+@property (weak, nonatomic) IBOutlet UIImageView *shinnyuImageView;
+
 @end

@@ -10,4 +10,6 @@
 #import "AppDelegate.h" //変数管理
 @interface kaihiViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIImageView *backImageView;
+@property (weak, nonatomic) IBOutlet UIButton *returnBtn;
 @end

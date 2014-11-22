@@ -7,8 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Sound.h" //音源クラス
 
 @interface ViewController : UIViewController
+
+@property (weak, nonatomic) IBOutlet UIImageView *backImageView;
+@property (weak, nonatomic) IBOutlet UIButton *myButton;
 
 @end
 

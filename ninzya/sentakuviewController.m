@@ -39,17 +39,21 @@
 */
 
 - (IBAction)syokyu:(id)sender {
-    app.cleartime = 100;
+    app.cleartime = 600;
     app.kaihi = 2;
+    app.level = 1;
 }
 
 - (IBAction)tyukyu:(id)sender {
-    app.cleartime = 1000;
+    app.cleartime = 3600;
     app.kaihi = 4;
+    app.level = 2;
 }
 
 - (IBAction)zyokyu:(id)sender {
-    app.cleartime = 10000;
+    app.cleartime = 10800;
     app.kaihi = 6;
+    app.level = 3;
+    
 }
 @end

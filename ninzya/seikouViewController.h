@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h" //変数管理
+#import "Sound.h" //音源クラス
 
 @interface seikouViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIImageView *backImageView;
+@property (weak, nonatomic) IBOutlet UIButton *returnBtn;
 
 @end

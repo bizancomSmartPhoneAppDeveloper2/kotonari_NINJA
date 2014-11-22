@@ -23,7 +23,7 @@
 - (void)viewDidLoad {
     app = [[UIApplication sharedApplication] delegate]; //変数管理のデリゲート
     mySound = [[Sound alloc]init]; //音源クラスのインスタンス初期化
-    
+
     srand((unsigned)time(NULL));//被らない数値を渡して初期化
     random = rand() % 10;//0～9の数値をランダムに取得 → 見つかった、見つからないの判定をするため
     
@@ -39,7 +39,7 @@
                                                      name:UIDeviceProximityStateDidChangeNotification
                                                    object:nil];
     }
-    
+  
     //ラベルに数字を表示
     int hours = app.time/3600;
     int minutes = (app.time%3600)/60;
@@ -48,8 +48,43 @@
     self.pointup.text = [NSString stringWithFormat:@"%d",app.point];
     NSLog(@"時間は%dポイントは%d",app.time,app.point);
     
+//    //背景画像を変更する
+//    NSLog(@"レベルは%d",app.level);
+//    if (app.level == 2) {
+//        self.backImageView.image = [UIImage imageNamed:@"kouryaku_back_02.jpg"];
+//    }else if(app.level == 3) {
+//        self.backImageView.image = [UIImage imageNamed:@"kouryaku_back_03.jpg"];
+//    }
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    NSLog(@"viewDidAppear");
+    [super viewDidAppear:animated];
+    
+    //背景画像を変更する
+    NSLog(@"レベルは%d",app.level);
+    if (app.level == 1) {
+        self.backImageView.image = [UIImage imageNamed:@"kouryaku_back_01.png"];
+    }else if (app.level == 2) {
+        self.backImageView.image = [UIImage imageNamed:@"kouryaku_back_02.png"];
+    }else if(app.level == 3) {
+        self.backImageView.image = [UIImage imageNamed:@"kouryaku_back_03.png"];
+    }
+    
+    //攻略度合いの画像を変更する
+    if (app.cleartime/5 > app.time) {
+        self.shinnyuImageView.image = [UIImage imageNamed:@"shinnyuimage01.png"];
+    }else if ((app.cleartime/5)*2 > app.time) {
+        self.shinnyuImageView.image = [UIImage imageNamed:@"shinnyuimage02.png"];
+    }else if ((app.cleartime/5)*3 > app.time) {
+        self.shinnyuImageView.image = [UIImage imageNamed:@"shinnyuimage03.png"];
+    }else if ((app.cleartime/5)*4 > app.time) {
+        self.shinnyuImageView.image = [UIImage imageNamed:@"shinnyuimage04.png"];
+    }else{
+        self.shinnyuImageView.image = [UIImage imageNamed:@"shinnyuimage05.png"];
+    }
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

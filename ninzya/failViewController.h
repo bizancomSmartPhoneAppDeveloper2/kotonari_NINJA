@@ -10,4 +10,7 @@
 
 @interface failViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIImageView *backImageView;
+@property (weak, nonatomic) IBOutlet UIButton *returnBtn;
+
 @end

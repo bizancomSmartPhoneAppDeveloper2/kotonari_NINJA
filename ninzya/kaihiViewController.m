@@ -16,20 +16,38 @@
 AppDelegate *app; //変数管理
 }
 - (void)viewDidLoad {
-    [super viewDidLoad];
     app = [[UIApplication sharedApplication] delegate]; //変数管理のデリゲート
-    //判定待ちのアニメーション表示
-    //回避成功のアニメーション表示
+    [super viewDidLoad];
+    self.returnBtn.hidden = YES;
 }
 
-- (void)viewDidAppear:(BOOL)animated
+- (void)viewWillAppear:(BOOL)animated
 {
-    //経過時間（app.time）がクリア時間（cleartime）をこえていた場合はsucsesssegueを実行
-    if (app.time >= app.cleartime) {
-        //攻略へボタン隠したほうが良さげ
-        [NSThread sleepForTimeInterval:3.0]; //3秒間待つ
-        [self performSegueWithIdentifier:@"sucsesssegue" sender:self];
+    NSLog(@"viewWillAppear");
+    [super viewWillAppear:animated];
+    // アニメーション用画像を配列（imageList）にセット
+    NSMutableArray *imageList = [NSMutableArray array];
+    for (NSInteger i = 1; i <= 26; i++) {
+        NSString *imagePath = [NSString stringWithFormat:@"kaihiBack%02ld.png", (long)i];
+        UIImage *img = [UIImage imageNamed:imagePath];
+        [imageList addObject:img];
     }
+    self.backImageView.animationImages = imageList;
+    self.backImageView.animationDuration = 10;// アニメーションの間隔
+    self.backImageView.animationRepeatCount = 1;// ?回リピート 0なら永続
+    self.backImageView.image = [UIImage imageNamed:@"kaihiBack26.png"];
+    [self.backImageView startAnimating];
+    
+    //11秒後
+    [self performSelector:@selector(action) withObject:nil afterDelay:11];
+}
+
+- (void)viewDidAppear:(BOOL)animated{
+//    //経過時間（app.time）がクリア時間（cleartime）をこえていた場合はsucsesssegueを実行
+//    if (app.time >= app.cleartime) {
+//        //攻略へボタン隠したほうが良さげ
+//        [self performSegueWithIdentifier:@"sucsesssegue" sender:self];
+//    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -47,4 +65,19 @@ AppDelegate *app; //変数管理
 }
 */
 
+-(void)action{
+    self.backImageView.image = [UIImage imageNamed:@"kaihiBack27.png"];
+    self.returnBtn.hidden = NO;
+}
+
+- (IBAction)btnKouryaku:(UIButton *)sender {
+        //経過時間（app.time）がクリア時間（cleartime）をこえていた場合はsucsesssegueを実行
+        if (app.time >= app.cleartime) {
+            //攻略へボタン隠したほうが良さげ
+            [self performSegueWithIdentifier:@"sucsesssegue" sender:self];
+        }else{
+            [self performSegueWithIdentifier:@"kaihiToSyokyu" sender:self];
+        }
+
+}
 @end
