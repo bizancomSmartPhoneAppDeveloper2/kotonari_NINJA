@@ -1,20 +1,21 @@
 //
-//  prolog prologeViewController.m
+//  prologueViewController.m
 //  ninzya
 //
 //  Created by ビザンコムマック　13 on 2014/11/22.
 //  Copyright (c) 2014年 xxx. All rights reserved.
 //
 
-#import "prolog prologeViewController.h"
+#import "prologueViewController.h"
 
-@interface prolog_prologeViewController ()
+@interface prologueViewController ()
 
 @end
 
-@implementation prolog_prologeViewController{
+@implementation prologueViewController{
     int i;
 }
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -39,10 +40,10 @@
 - (IBAction)nextBtn:(UIButton *)sender {
     if(i<1){
         //背景を説明画像に差し替える
-//        self.XXXXView.image = [UIImage imageNamed:@"XXXXX.png"];
+        self.backImageView.image = [UIImage imageNamed:@"prologue_back_02.png"];
         i++;
     }else{
-    [self performSegueWithIdentifier:@"prologueToSentaku" sender:self]; //選択画面に移動するセグエ
+        [self performSegueWithIdentifier:@"prologueToSentaku" sender:self]; //選択画面に移動するセグエ
     }
 }
 @end

@@ -26,6 +26,8 @@ AppDelegate *app; //変数管理
 {
     //経過時間（app.time）がクリア時間（cleartime）をこえていた場合はsucsesssegueを実行
     if (app.time >= app.cleartime) {
+        //攻略へボタン隠したほうが良さげ
+        [NSThread sleepForTimeInterval:3.0]; //3秒間待つ
         [self performSegueWithIdentifier:@"sucsesssegue" sender:self];
     }
 }

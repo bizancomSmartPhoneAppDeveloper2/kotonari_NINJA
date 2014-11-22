@@ -24,7 +24,7 @@
 		65974F0D1A1DA4800077CBB7 /* sentakuviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65974F0C1A1DA4800077CBB7 /* sentakuviewController.m */; };
 		65974F101A1DB2540077CBB7 /* kaihiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65974F0F1A1DB2540077CBB7 /* kaihiViewController.m */; };
 		F404100B1A1FAAFB0020771F /* failViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F404100A1A1FAAFB0020771F /* failViewController.m */; };
-		F404100E1A1FAF310020771F /* prolog prologeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F404100D1A1FAF310020771F /* prolog prologeViewController.m */; };
+		F40410111A1FB9820020771F /* prologueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F40410101A1FB9820020771F /* prologueViewController.m */; };
 		F425B66D1A1DC57F0051BD12 /* katana-slash5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F425B66C1A1DC57F0051BD12 /* katana-slash5.mp3 */; };
 /* End PBXBuildFile section */
 
@@ -68,8 +68,8 @@
 		65974F0F1A1DB2540077CBB7 /* kaihiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = kaihiViewController.m; sourceTree = "<group>"; };
 		F40410091A1FAAFB0020771F /* failViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = failViewController.h; sourceTree = "<group>"; };
 		F404100A1A1FAAFB0020771F /* failViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = failViewController.m; sourceTree = "<group>"; };
-		F404100C1A1FAF310020771F /* prolog prologeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "prolog prologeViewController.h"; sourceTree = "<group>"; };
-		F404100D1A1FAF310020771F /* prolog prologeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "prolog prologeViewController.m"; sourceTree = "<group>"; };
+		F404100F1A1FB9820020771F /* prologueViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = prologueViewController.h; sourceTree = "<group>"; };
+		F40410101A1FB9820020771F /* prologueViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = prologueViewController.m; sourceTree = "<group>"; };
 		F425B66C1A1DC57F0051BD12 /* katana-slash5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "katana-slash5.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -122,8 +122,8 @@
 				655C224B1A118E7C00A0426C /* AppDelegate.m */,
 				655C22501A118E7C00A0426C /* ViewController.h */,
 				655C22511A118E7C00A0426C /* ViewController.m */,
-				F404100C1A1FAF310020771F /* prolog prologeViewController.h */,
-				F404100D1A1FAF310020771F /* prolog prologeViewController.m */,
+				F404100F1A1FB9820020771F /* prologueViewController.h */,
+				F40410101A1FB9820020771F /* prologueViewController.m */,
 				65974F0B1A1DA4800077CBB7 /* sentakuviewController.h */,
 				65974F0C1A1DA4800077CBB7 /* sentakuviewController.m */,
 				65953A7B1A159EA800433005 /* syokyuViewController.h */,
@@ -277,8 +277,8 @@
 				65953A861A15C20D00433005 /* seikouViewController.m in Sources */,
 				657E145D1A19A3E000351B5D /* itemViewController.m in Sources */,
 				655C224C1A118E7C00A0426C /* AppDelegate.m in Sources */,
+				F40410111A1FB9820020771F /* prologueViewController.m in Sources */,
 				65974F101A1DB2540077CBB7 /* kaihiViewController.m in Sources */,
-				F404100E1A1FAF310020771F /* prolog prologeViewController.m in Sources */,
 				F404100B1A1FAAFB0020771F /* failViewController.m in Sources */,
 				655C22491A118E7C00A0426C /* main.m in Sources */,
 				65974F0D1A1DA4800077CBB7 /* sentakuviewController.m in Sources */,

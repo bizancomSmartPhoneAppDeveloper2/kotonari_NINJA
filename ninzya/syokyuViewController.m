@@ -47,7 +47,10 @@
     self.mySound = [[AVAudioPlayer alloc]initWithContentsOfURL:url error:NULL];
     
     //ラベルに数字を表示
-    self.countLabel.text = [NSString stringWithFormat:@"%d",app.time];
+    int hours = app.time/3600;
+    int minutes = (app.time%3600)/60;
+    int seconds = (app.time%3600)%60;
+    self.countLabel.text = [NSString stringWithFormat:@"%02d:%02d:%02d",hours,minutes,seconds];
     self.pointup.text = [NSString stringWithFormat:@"%d",app.point];
     NSLog(@"時間は%dポイントは%d",app.time,app.point);
 }
@@ -129,7 +132,6 @@
     NSLog(@"攻略画面に戻る");
     [self viewDidLoad];
 }
-
 @end
 
 

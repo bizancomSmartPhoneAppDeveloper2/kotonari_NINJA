@@ -1,5 +1,5 @@
 //
-//  prolog prologeViewController.h
+//  prologueViewController.h
 //  ninzya
 //
 //  Created by ビザンコムマック　13 on 2014/11/22.
@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface prolog_prologeViewController : UIViewController
+@interface prologueViewController : UIViewController
+
+@property (weak, nonatomic) IBOutlet UIImageView *backImageView;
 
 @end
