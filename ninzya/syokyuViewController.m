@@ -7,23 +7,22 @@
 //
 
 #import "syokyuViewController.h"
-#import <AudioToolbox/AudioServices.h>
-#import <AVFoundation/AVFoundation.h>
 
 @interface syokyuViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *countLabel;
 @property (weak, nonatomic) IBOutlet UILabel *pointup;
-@property AVAudioPlayer *mySound;
 @end
 
 @implementation syokyuViewController {
     AppDelegate *app; //変数管理
+    Sound *mySound; //音源クラスのインスタンス
     NSTimer *tm; //タイマー
     int random;
 }
 
 - (void)viewDidLoad {
     app = [[UIApplication sharedApplication] delegate]; //変数管理のデリゲート
+    mySound = [[Sound alloc]init]; //音源クラスのインスタンス初期化
     
     srand((unsigned)time(NULL));//被らない数値を渡して初期化
     random = rand() % 10;//0～9の数値をランダムに取得 → 見つかった、見つからないの判定をするため
@@ -41,11 +40,6 @@
                                                    object:nil];
     }
     
-    //音を鳴らすためのインスタンスを準備
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"katana-slash5" ofType:@"mp3"];
-    NSURL *url = [NSURL fileURLWithPath:path];
-    self.mySound = [[AVAudioPlayer alloc]initWithContentsOfURL:url error:NULL];
-    
     //ラベルに数字を表示
     int hours = app.time/3600;
     int minutes = (app.time%3600)/60;
@@ -53,6 +47,7 @@
     self.countLabel.text = [NSString stringWithFormat:@"%02d:%02d:%02d",hours,minutes,seconds];
     self.pointup.text = [NSString stringWithFormat:@"%d",app.point];
     NSLog(@"時間は%dポイントは%d",app.time,app.point);
+    
 }
 
 
@@ -68,7 +63,8 @@
     if([UIDevice currentDevice].proximityState == YES) {
         //本体に近接したときの処理
         NSLog(@"センサー反応");
-        [self.mySound play];
+        [mySound soundKatana];
+        [mySound soundSilent]; //無音の音声ファイルを再生し続ける
         
         //タイマー生成
         tm = [NSTimer scheduledTimerWithTimeInterval:1
@@ -80,13 +76,16 @@
     else {
         //本体から離れたときの処理
         NSLog(@"センサー停止");
-        [self.mySound stop];
+        [mySound soundKatana];
+        [mySound soundSilentStop];
         [tm invalidate];
+        
             // 近接センサオフ
             [UIDevice currentDevice].proximityMonitoringEnabled = NO;
             // 近接センサ監視解除
             [[NSNotificationCenter defaultCenter] removeObserver:self
                                                             name:UIDeviceProximityStateDidChangeNotification object:nil];
+        
         
             //見つかった見つからない判定（viewDidLoadで発生させた乱数を元に）
                 if(random >= app.kaihi){

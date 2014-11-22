@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h" //変数管理
-#import "sentakuviewController.h"
+#import "Sound.h" //音源クラス
+
 @interface syokyuViewController : UIViewController
 
 @end
