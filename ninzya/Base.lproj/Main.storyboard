@@ -225,49 +225,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sentaku_back" translatesAutoresizingMaskIntoConstraints="NO" id="UaN-KB-7mb">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="itemBack" translatesAutoresizingMaskIntoConstraints="NO" id="UaN-KB-7mb">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yS2-h9-Uik">
-                                <rect key="frame" x="219" y="28" width="85" height="57"/>
-                                <state key="normal" title="城に戻る">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="XOs-4h-pMm" kind="unwind" unwindAction="returnSyokyu:" id="MEw-Mz-tWU"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r6Z-Y2-FYZ">
-                                <rect key="frame" x="38" y="473" width="38" height="30"/>
-                                <state key="normal" title="item1">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r6Z-Y2-FYZ">
+                                <rect key="frame" x="119" y="442" width="84" height="91"/>
+                                <state key="normal" image="btn_itemRenkin">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="item1btn:" destination="qlD-wp-RGk" eventType="touchUpInside" id="s2G-EB-jpb"/>
+                                    <action selector="item2btn:" destination="qlD-wp-RGk" eventType="touchUpInside" id="c0s-7b-TLk"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X3C-su-jBs">
-                                <rect key="frame" x="141" y="473" width="38" height="30"/>
-                                <state key="normal" title="item2">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Enz-CP-FWN">
+                                <rect key="frame" x="36" y="442" width="84" height="91"/>
+                                <state key="normal" image="btn_itemBunshin">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="item2btn:" destination="qlD-wp-RGk" eventType="touchUpInside" id="Cjk-0f-etw"/>
+                                    <action selector="item1btn:" destination="qlD-wp-RGk" eventType="touchUpInside" id="oSa-NE-4Rz"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Asz-iP-CZ4">
-                                <rect key="frame" x="242" y="473" width="38" height="30"/>
-                                <state key="normal" title="item3">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="item3btn:" destination="qlD-wp-RGk" eventType="touchUpInside" id="VGb-QW-jff"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="59Q-m8-nxl">
-                                <rect key="frame" x="145" y="392" width="30" height="30"/>
-                                <state key="normal" title="使う">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="itemImage01" translatesAutoresizingMaskIntoConstraints="NO" id="sqB-rS-WqR">
+                                <rect key="frame" x="30" y="53" width="260" height="320"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="59Q-m8-nxl">
+                                <rect key="frame" x="45" y="317" width="230" height="60"/>
+                                <state key="normal" image="btn_kounyu">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -275,25 +260,42 @@
                                     <segue destination="XOs-4h-pMm" kind="unwind" unwindAction="returnSyokyu:" id="lOl-aR-V0J"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vBt-Px-9eH">
-                                <rect key="frame" x="40" y="131" width="240" height="228"/>
-                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yS2-h9-Uik">
+                                <rect key="frame" x="45" y="372" width="230" height="60"/>
+                                <state key="normal" image="btn_returnKouryaku">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="XOs-4h-pMm" kind="unwind" unwindAction="returnSyokyu:" id="MEw-Mz-tWU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t4U-vM-9tp">
+                                <rect key="frame" x="202" y="442" width="84" height="91"/>
+                                <state key="normal" image="btn_itemKakure">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="item1btn:" destination="qlD-wp-RGk" eventType="touchUpInside" id="mri-3Q-MgQ"/>
+                                    <action selector="item3btn:" destination="qlD-wp-RGk" eventType="touchUpInside" id="zI5-9A-yb5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="item1btn" destination="r6Z-Y2-FYZ" id="Nu1-GO-2o7"/>
-                        <outlet property="item2btn" destination="X3C-su-jBs" id="ZXw-B0-cqW"/>
-                        <outlet property="item3btn" destination="Asz-iP-CZ4" id="GOr-fc-Li1"/>
-                        <outlet property="itemImageVIew" destination="vBt-Px-9eH" id="kT4-eQ-ACj"/>
+                        <outlet property="item1btn" destination="Enz-CP-FWN" id="t57-a8-TBh"/>
+                        <outlet property="item2btn" destination="r6Z-Y2-FYZ" id="jU3-1r-BkP"/>
+                        <outlet property="item3btn" destination="t4U-vM-9tp" id="dhs-UT-0LH"/>
+                        <outlet property="itemImageVIew" destination="sqB-rS-WqR" id="oIt-ep-zPW"/>
                         <outlet property="itemUsebtn" destination="59Q-m8-nxl" id="vjx-iu-EYV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bKE-Ty-zKB" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="XOs-4h-pMm" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2460" y="814"/>
+            <point key="canvasLocation" x="2405" y="801"/>
         </scene>
         <!--Fail View Controller-->
         <scene sceneID="He3-el-Cps">
@@ -395,9 +397,16 @@
         <image name="btn _kouryaku" width="230" height="70"/>
         <image name="btn-ninmukaisi" width="230" height="70"/>
         <image name="btn_item" width="230" height="70"/>
+        <image name="btn_itemBunshin" width="84" height="91"/>
+        <image name="btn_itemKakure" width="84" height="91"/>
+        <image name="btn_itemRenkin" width="84" height="91"/>
+        <image name="btn_kounyu" width="230" height="60"/>
         <image name="btn_next" width="60" height="25"/>
+        <image name="btn_returnKouryaku" width="230" height="60"/>
         <image name="btn_returnTitle" width="230" height="70"/>
         <image name="failBack01" width="320" height="568"/>
+        <image name="itemBack" width="320" height="568"/>
+        <image name="itemImage01" width="261" height="321"/>
         <image name="kaihiBack01" width="320" height="568"/>
         <image name="kouryaku_back_00" width="320" height="568"/>
         <image name="prologue_back_01" width="320" height="568"/>

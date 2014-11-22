@@ -23,11 +23,8 @@
         app = [[UIApplication sharedApplication] delegate]; //変数管理のデリゲート
         
         [super viewDidLoad];
-        //アイテムを使うボタンと画像は隠しておく
+        //アイテムを使うボタンは隠しておく
         self.itemUsebtn.hidden = YES;
-        self.itemImageVIew.hidden =YES;
-        
-        NSLog(@"選択中のアイテムは%d",itemselect);
     }
     
 - (void)didReceiveMemoryWarning
@@ -40,8 +37,7 @@
     itemselect = 1;
     //アイテム使用ボタンを表示し、イメージビューにアイテム１の画像を表示
     self.itemUsebtn.hidden = NO;
-    self.itemImageVIew.hidden =NO;
-    self.itemImageVIew.image = [UIImage imageNamed:@"image1.jpg"];
+    self.itemImageVIew.image = [UIImage imageNamed:@"itemImage02.png"];
 }
 
 //item2のボタン
@@ -49,7 +45,7 @@
     itemselect = 2;
     self.itemUsebtn.hidden = NO;
     self.itemImageVIew.hidden =NO;
-    self.itemImageVIew.image = [UIImage imageNamed:@"image2.jpg"];
+    self.itemImageVIew.image = [UIImage imageNamed:@"itemImage03.png"];
 }
 
 //item3のボタン
@@ -57,7 +53,7 @@
     itemselect = 3;
     self.itemUsebtn.hidden = NO;
     self.itemImageVIew.hidden =NO;
-    self.itemImageVIew.image = [UIImage imageNamed:@"image3.jpg"];
+    self.itemImageVIew.image = [UIImage imageNamed:@"itemImage04.png"];
 }
 
 //item使用ボタン
