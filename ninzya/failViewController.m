@@ -12,12 +12,20 @@
 
 @end
 
-@implementation failViewController
+@implementation failViewController{
+    AppDelegate *app; //変数管理
+}
 
 - (void)viewDidLoad {
+    app = [[UIApplication sharedApplication] delegate]; //変数管理のデリゲート
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.returnBtn.hidden = YES;
+    
+    //ポイントをUserDefaultsで保存
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSNumber *num = [NSNumber numberWithInt:app.point];
+    [defaults setObject:num forKey:@"ポイント"];
 }
 
 - (void)viewWillAppear:(BOOL)animated

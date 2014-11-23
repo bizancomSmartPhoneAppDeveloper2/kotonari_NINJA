@@ -19,6 +19,11 @@ AppDelegate *app; //変数管理
     app = [[UIApplication sharedApplication] delegate]; //変数管理のデリゲート
     [super viewDidLoad];
     self.returnBtn.hidden = YES;
+    
+    //ポイントをUserDefaultsで保存
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSNumber *num = [NSNumber numberWithInt:app.point];
+    [defaults setObject:num forKey:@"ポイント"];
 }
 
 - (void)viewWillAppear:(BOOL)animated

@@ -23,7 +23,6 @@
 - (void)viewDidLoad {
     app = [[UIApplication sharedApplication] delegate]; //変数管理のデリゲート
     mySound = [[Sound alloc]init]; //音源クラスのインスタンス初期化
-
     srand((unsigned)time(NULL));//被らない数値を渡して初期化
     random = rand() % 10;//0～9の数値をランダムに取得 → 見つかった、見つからないの判定をするため
     
@@ -47,14 +46,6 @@
     self.countLabel.text = [NSString stringWithFormat:@"%02d:%02d:%02d",hours,minutes,seconds];
     self.pointup.text = [NSString stringWithFormat:@"%d",app.point];
     NSLog(@"時間は%dポイントは%d",app.time,app.point);
-    
-//    //背景画像を変更する
-//    NSLog(@"レベルは%d",app.level);
-//    if (app.level == 2) {
-//        self.backImageView.image = [UIImage imageNamed:@"kouryaku_back_02.jpg"];
-//    }else if(app.level == 3) {
-//        self.backImageView.image = [UIImage imageNamed:@"kouryaku_back_03.jpg"];
-//    }
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -122,18 +113,24 @@
                                                             name:UIDeviceProximityStateDidChangeNotification object:nil];
         
         
-            //見つかった見つからない判定（viewDidLoadで発生させた乱数を元に）
-                if(random >= app.kaihi){
-                    //成功（見つからなかった）
-                    NSLog(@"成功した");
-                    [self performSegueWithIdentifier:@"kaihi" sender:self]; //成功画面に移動するセグエ
-                }else{
-                    //失敗（見つかった）
-                    NSLog(@"失敗した");
-                    app.time = 0; //経過時間を0にする
-                    app.point = app.point/2; //ポイントを半分にする
-                    [self performSegueWithIdentifier:@"failsegue" sender:self]; //失敗画面に移動するセグエ
-                }
+            //見つかった見つからない判定（viewDidLoadで発生させた乱数を元に）隠れ身の術を使用中は無条件で成功
+        if (app.kakuremi == YES) {
+            NSLog(@"隠れ身の術を使用して成功した");
+            [self performSegueWithIdentifier:@"kaihi" sender:self]; //成功画面に移動するセグエ
+        }else if(random >= app.kaihi){
+            //成功（見つからなかった）
+            NSLog(@"成功した");
+            [self performSegueWithIdentifier:@"kaihi" sender:self]; //成功画面に移動するセグエ
+        }else{
+            //失敗（見つかった）
+            NSLog(@"失敗した");
+            app.time = 0; //経過時間を0にする
+            [self performSegueWithIdentifier:@"failsegue" sender:self]; //失敗画面に移動するセグエ
+        }
+        //アイテム使用の変数を初期化
+        app.bunshin = NO;
+        app.renkin = NO;
+        app.kakuremi = NO;
     }
 }
 
@@ -142,15 +139,32 @@
 -(void)hogeMethod{
     //app.timeを1秒ごとに増やす
     app.time++;
+    //分身の術を使用中は倍のスピード
+    if (app.bunshin == YES) {
+        app.time++;
+    }
     NSLog(@"秒数は%d",app.time);
     
-    //初級では2秒に1ポイント増えるようにする。中級上級は後ほど考える。
-    if(app.time%2 == 0){
-        app.point++;
+    //60秒に1ポイント増えるようにする。ただし分身の術使用中は120秒に1ポイントにする
+    if (app.bunshin == NO) {
+        if(app.time%60 == 0){
+            app.point++;
+            //錬金の術使用時は更に増える
+            if (app.renkin == YES){
+                app.point++;
+            }
+            }
+    }else{
+        if(app.time%120 == 0){
+            app.point++;
+            //錬金の術使用時は更に増える
+            if (app.renkin == YES){
+                app.point++;
+            }
+        }
     }
     NSLog(@"ポイントは%d",app.point);
 }
-
 
 //アイテム画面に移動するボタン
 - (IBAction)itemBtn:(UIButton *)sender {
