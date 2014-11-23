@@ -75,7 +75,7 @@
 - (IBAction)itemUsebtn:(UIButton *)sender {
     if(itemselect == 1){
         NSLog(@"アイテム1を使った");
-        if(app.point >= 10){
+        if(app.point >= 100){
             //ポイントが減ってアイテムの効果がプラスされる
             app.point = app.point - 100;
             app.bunshin = YES;
@@ -94,7 +94,7 @@
         }
     }else if(itemselect == 2){
         NSLog(@"アイテム2を使った");
-        if(app.point >= 10){
+        if(app.point >= 50){
             //ポイントが減ってアイテムの効果がプラスされる
             app.point = app.point - 50;
             app.renkin = YES;
@@ -113,7 +113,7 @@
         }
     }else if(itemselect == 3){
         NSLog(@"アイテム3を使った");
-        if(app.point >= 10){
+        if(app.point >= 300){
             //ポイントが減ってアイテムの効果がプラスされる
             app.point = app.point - 300;
             app.kakuremi = YES;
