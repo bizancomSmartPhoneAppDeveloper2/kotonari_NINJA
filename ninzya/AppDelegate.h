@@ -20,6 +20,12 @@
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
 
+//ストーリーボードの名前の変数
+@property (nonatomic) NSString  *sbName;
+
+//iPhone4Sかどうかの判定のための変数
+@property NSInteger deviceNum;
+
 @property int point;
 @property int time;
 //@property int item;

@@ -29,6 +29,10 @@
 		F42DBBDA1A20824D0074DB64 /* Byousin01-1L.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F42DBBD91A20824D0074DB64 /* Byousin01-1L.mp3 */; };
 		F42DBBDD1A2085E70074DB64 /* Sound.m in Sources */ = {isa = PBXBuildFile; fileRef = F42DBBDC1A2085E70074DB64 /* Sound.m */; };
 		F42DBBDF1A20883F0074DB64 /* silent.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F42DBBDE1A20883F0074DB64 /* silent.mp3 */; };
+		F44D5ABE1A256B56007641D4 /* iPhoneOld.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F44D5ABD1A256B56007641D4 /* iPhoneOld.storyboard */; };
+		F44D5AC21A256C49007641D4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F44D5ABF1A256C49007641D4 /* Default-568h@2x.png */; };
+		F44D5AC31A256C49007641D4 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = F44D5AC01A256C49007641D4 /* Default.png */; };
+		F44D5AC41A256C49007641D4 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F44D5AC11A256C49007641D4 /* Default@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +82,10 @@
 		F42DBBDB1A2085E70074DB64 /* Sound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sound.h; sourceTree = "<group>"; };
 		F42DBBDC1A2085E70074DB64 /* Sound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sound.m; sourceTree = "<group>"; };
 		F42DBBDE1A20883F0074DB64 /* silent.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = silent.mp3; sourceTree = "<group>"; };
+		F44D5ABD1A256B56007641D4 /* iPhoneOld.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhoneOld.storyboard; sourceTree = "<group>"; };
+		F44D5ABF1A256C49007641D4 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../../../../Downloads/Default/Default-568h@2x.png"; sourceTree = "<group>"; };
+		F44D5AC01A256C49007641D4 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../../../../Downloads/Default/Default.png; sourceTree = "<group>"; };
+		F44D5AC11A256C49007641D4 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../../../../Downloads/Default/Default@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +154,7 @@
 				65953A841A15C20D00433005 /* seikouViewController.h */,
 				65953A851A15C20D00433005 /* seikouViewController.m */,
 				655C22531A118E7C00A0426C /* Main.storyboard */,
+				F44D5ABD1A256B56007641D4 /* iPhoneOld.storyboard */,
 				655C22561A118E7C00A0426C /* Images.xcassets */,
 				655C22581A118E7C00A0426C /* LaunchScreen.xib */,
 				655C224D1A118E7C00A0426C /* ninzya.xcdatamodeld */,
@@ -157,6 +166,9 @@
 		655C22461A118E7C00A0426C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F44D5ABF1A256C49007641D4 /* Default-568h@2x.png */,
+				F44D5AC01A256C49007641D4 /* Default.png */,
+				F44D5AC11A256C49007641D4 /* Default@2x.png */,
 				F42DBBD91A20824D0074DB64 /* Byousin01-1L.mp3 */,
 				F42DBBDE1A20883F0074DB64 /* silent.mp3 */,
 				F425B66C1A1DC57F0051BD12 /* katana-slash5.mp3 */,
@@ -265,9 +277,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				655C22551A118E7C00A0426C /* Main.storyboard in Resources */,
+				F44D5AC31A256C49007641D4 /* Default.png in Resources */,
+				F44D5AC41A256C49007641D4 /* Default@2x.png in Resources */,
 				655C225A1A118E7C00A0426C /* LaunchScreen.xib in Resources */,
 				655C22571A118E7C00A0426C /* Images.xcassets in Resources */,
 				F425B66D1A1DC57F0051BD12 /* katana-slash5.mp3 in Resources */,
+				F44D5ABE1A256B56007641D4 /* iPhoneOld.storyboard in Resources */,
+				F44D5AC21A256C49007641D4 /* Default-568h@2x.png in Resources */,
 				F42DBBDA1A20824D0074DB64 /* Byousin01-1L.mp3 in Resources */,
 				F42DBBDF1A20883F0074DB64 /* silent.mp3 in Resources */,
 			);
