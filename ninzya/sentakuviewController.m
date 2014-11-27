@@ -48,7 +48,6 @@
     [app.opsound soundOpeningStop];
     app.opsound = nil;
     [mySound soundbutton];
-    
 }
 
 - (IBAction)tyukyu:(id)sender {
