@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
@@ -8,25 +8,23 @@
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
-                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="title_back_01" translatesAutoresizingMaskIntoConstraints="NO" id="y4E-jf-5fO">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="title_back_01" id="y4E-jf-5fO">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k63-3Z-ryD">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="k63-3Z-ryD">
                                 <rect key="frame" x="45" y="477" width="230" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="btn-ninmukaisi">
                                     <color key="titleColor" red="1" green="0.03480266211" blue="0.021788950790000001" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="JdI-nn-NRC" kind="presentation" id="uRU-qZ-UlO"/>
+                                    <segue destination="JdI-nn-NRC" kind="modal" id="uRU-qZ-UlO"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -40,25 +38,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="424" y="387"/>
+            <point key="canvasLocation" x="226.13333333333333" y="366.36000000000001"/>
         </scene>
         <!--Kaihi View Controller-->
         <scene sceneID="mDO-FH-50B">
             <objects>
                 <viewController id="gHm-TP-ZO7" customClass="kaihiViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="2yW-Ln-G9T"/>
-                        <viewControllerLayoutGuide type="bottom" id="Bbc-Gn-4Fj"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="fvA-5o-Nzm">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="kaihiBack01" translatesAutoresizingMaskIntoConstraints="NO" id="i4F-BC-A5m">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kaihiBack01" id="i4F-BC-A5m">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d0W-Em-bGe">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="d0W-Em-bGe">
                                 <rect key="frame" x="45" y="478" width="230" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="btn _kouryaku">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -73,36 +69,35 @@
                     <connections>
                         <outlet property="backImageView" destination="i4F-BC-A5m" id="2Gz-Fx-Vfw"/>
                         <outlet property="returnBtn" destination="d0W-Em-bGe" id="bmh-rT-cuA"/>
-                        <segue destination="jpo-4r-hgT" kind="presentation" identifier="sucsesssegue" animates="NO" id="efq-9P-09D"/>
-                        <segue destination="GnH-TG-hrw" kind="presentation" identifier="kaihiToSyokyu" id="b6Q-g6-kxj"/>
+                        <segue destination="jpo-4r-hgT" kind="modal" identifier="sucsesssegue" animates="NO" id="efq-9P-09D"/>
+                        <segue destination="GnH-TG-hrw" kind="modal" identifier="kaihiToSyokyu" id="b6Q-g6-kxj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TqG-gO-dqy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1768" y="-304"/>
+            <point key="canvasLocation" x="942.93333333333328" y="-287.78666666666669"/>
         </scene>
         <!--Seikou View Controller-->
         <scene sceneID="tWb-Db-fx3">
             <objects>
                 <viewController id="jpo-4r-hgT" customClass="seikouViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ReH-M7-RVe"/>
-                        <viewControllerLayoutGuide type="bottom" id="sSZ-S3-5Kq"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Eis-ta-Vip">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Zm-yj-56K">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="5Zm-yj-56K">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4AB-Dl-ofS">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="4AB-Dl-ofS">
                                 <rect key="frame" x="45" y="478" width="230" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="btn_returnTitle">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="vXZ-lx-hvc" kind="presentation" id="4Hh-TK-hzH"/>
+                                    <action selector="btnToTitle:" destination="jpo-4r-hgT" eventType="touchUpInside" id="cBg-Qm-a8X"/>
+                                    <segue destination="vXZ-lx-hvc" kind="modal" id="4Hh-TK-hzH"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -116,25 +111,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qyh-un-paA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2232" y="-460"/>
+            <point key="canvasLocation" x="1190.4000000000001" y="-435.46666666666664"/>
         </scene>
         <!--Prologue View Controller-->
         <scene sceneID="2Hn-Hr-UG4">
             <objects>
                 <viewController id="JdI-nn-NRC" customClass="prologueViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Ore-Wp-UfN"/>
-                        <viewControllerLayoutGuide type="bottom" id="sBT-dP-0UX"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="yc8-KL-NMR">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="prologue_back_01" translatesAutoresizingMaskIntoConstraints="NO" id="PoT-Za-vJN">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="prologue_back_01" id="PoT-Za-vJN">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kox-MV-hYk">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="kox-MV-hYk">
                                 <rect key="frame" x="224" y="245" width="60" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="btn_next">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -148,53 +141,54 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="backImageView" destination="PoT-Za-vJN" id="eLO-cE-UpY"/>
-                        <segue destination="5pf-dr-yOb" kind="presentation" identifier="prologueToSentaku" animates="NO" id="Wdz-P0-5gb"/>
+                        <segue destination="5pf-dr-yOb" kind="modal" identifier="prologueToSentaku" animates="NO" id="Wdz-P0-5gb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fc3-4v-KGc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="836" y="387"/>
+            <point key="canvasLocation" x="445.86666666666667" y="366.36000000000001"/>
         </scene>
         <!--Syokyu View Controller-->
         <scene sceneID="S1e-h7-6eV">
             <objects>
                 <viewController id="GnH-TG-hrw" customClass="syokyuViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="63J-Ml-Wpj"/>
-                        <viewControllerLayoutGuide type="bottom" id="maQ-2Q-eUy"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="nke-x2-qDt">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="kouryaku_back_00" translatesAutoresizingMaskIntoConstraints="NO" id="1GN-Za-1NR">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kouryaku_back_00" id="1GN-Za-1NR">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xyk-eO-39x">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Xyk-eO-39x">
                                 <rect key="frame" x="45" y="478" width="230" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="btn_item">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="itemBtn:" destination="GnH-TG-hrw" eventType="touchUpInside" id="FRI-qI-OYT"/>
-                                    <segue destination="qlD-wp-RGk" kind="show" identifier="" id="lf1-HE-vgm"/>
+                                    <segue destination="qlD-wp-RGk" kind="modal" identifier="" id="lf1-HE-vgm"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="０" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hVC-Hf-Lis">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="０" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hVC-Hf-Lis">
                                 <rect key="frame" x="116" y="163" width="186" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="０" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6P2-m1-1fi">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="０" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6P2-m1-1fi">
                                 <rect key="frame" x="116" y="132" width="186" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MNy-0T-tEz">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="MNy-0T-tEz">
                                 <rect key="frame" x="10" y="262" width="300" height="210"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -205,31 +199,29 @@
                         <outlet property="countLabel" destination="6P2-m1-1fi" id="4r5-XA-RIw"/>
                         <outlet property="pointup" destination="hVC-Hf-Lis" id="wE6-Ly-GRG"/>
                         <outlet property="shinnyuImageView" destination="MNy-0T-tEz" id="EOg-Oy-a5W"/>
-                        <segue destination="VPc-7z-4xx" kind="presentation" identifier="failsegue" animates="NO" id="Zdl-gp-4Y0"/>
-                        <segue destination="gHm-TP-ZO7" kind="presentation" identifier="kaihi" animates="NO" id="CrH-Oi-CIm"/>
+                        <segue destination="VPc-7z-4xx" kind="modal" identifier="failsegue" animates="NO" id="Zdl-gp-4Y0"/>
+                        <segue destination="gHm-TP-ZO7" kind="modal" identifier="kaihi" animates="NO" id="CrH-Oi-CIm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4PN-Gw-UVl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1661" y="387"/>
+            <point key="canvasLocation" x="885.86666666666667" y="366.36000000000001"/>
         </scene>
         <!--Item View Controller-->
         <scene sceneID="jLk-ie-kv1">
             <objects>
                 <viewController id="qlD-wp-RGk" customClass="itemViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="a8S-OD-TvT"/>
-                        <viewControllerLayoutGuide type="bottom" id="Pxa-d8-7wc"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="6cR-i9-fcF">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="itemBack" translatesAutoresizingMaskIntoConstraints="NO" id="UaN-KB-7mb">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="itemBack" id="UaN-KB-7mb">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r6Z-Y2-FYZ">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="r6Z-Y2-FYZ">
                                 <rect key="frame" x="119" y="442" width="84" height="91"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="btn_itemRenkin">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -238,8 +230,9 @@
                                     <action selector="item2btn:" destination="qlD-wp-RGk" eventType="touchUpInside" id="c0s-7b-TLk"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Enz-CP-FWN">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Enz-CP-FWN">
                                 <rect key="frame" x="36" y="442" width="84" height="91"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="btn_itemBunshin">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -247,11 +240,13 @@
                                     <action selector="item1btn:" destination="qlD-wp-RGk" eventType="touchUpInside" id="oSa-NE-4Rz"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="itemImage01" translatesAutoresizingMaskIntoConstraints="NO" id="sqB-rS-WqR">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="itemImage01" id="sqB-rS-WqR">
                                 <rect key="frame" x="30" y="53" width="260" height="320"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="59Q-m8-nxl">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="59Q-m8-nxl">
                                 <rect key="frame" x="45" y="317" width="230" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="btn_kounyu">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -260,8 +255,9 @@
                                     <segue destination="XOs-4h-pMm" kind="unwind" unwindAction="returnSyokyu:" id="lOl-aR-V0J"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yS2-h9-Uik">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="yS2-h9-Uik">
                                 <rect key="frame" x="45" y="372" width="230" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="btn_returnKouryaku">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -270,8 +266,9 @@
                                     <segue destination="XOs-4h-pMm" kind="unwind" unwindAction="returnSyokyu:" id="MEw-Mz-tWU"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t4U-vM-9tp">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="t4U-vM-9tp">
                                 <rect key="frame" x="202" y="442" width="84" height="91"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="btn_itemKakure">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -295,31 +292,29 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bKE-Ty-zKB" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="XOs-4h-pMm" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2405" y="801"/>
+            <point key="canvasLocation" x="1282.6666666666667" y="758.27999999999997"/>
         </scene>
         <!--Fail View Controller-->
         <scene sceneID="He3-el-Cps">
             <objects>
                 <viewController id="VPc-7z-4xx" customClass="failViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="sEZ-XA-eg5"/>
-                        <viewControllerLayoutGuide type="bottom" id="Pfn-qS-sja"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="0pv-Yq-Nsh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="failBack01" translatesAutoresizingMaskIntoConstraints="NO" id="psu-qO-bYS">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="failBack01" id="psu-qO-bYS">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z7I-im-kgn">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="z7I-im-kgn">
                                 <rect key="frame" x="45" y="478" width="230" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="btn_returnTitle">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="vXZ-lx-hvc" kind="presentation" id="gKS-T9-5fE"/>
+                                    <segue destination="vXZ-lx-hvc" kind="modal" id="gKS-T9-5fE"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -333,54 +328,54 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TbR-7p-aNQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1661" y="1168"/>
+            <point key="canvasLocation" x="885.86666666666667" y="1105.7066666666667"/>
         </scene>
         <!--Sentakuview Controller-->
         <scene sceneID="Gy6-wp-hRK">
             <objects>
                 <viewController id="5pf-dr-yOb" customClass="sentakuviewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="UJZ-9t-z9G"/>
-                        <viewControllerLayoutGuide type="bottom" id="hzH-zE-rTO"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="lJM-Gp-NUr">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sentaku_back" translatesAutoresizingMaskIntoConstraints="NO" id="Ddb-OJ-W2d">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sentaku_back" id="Ddb-OJ-W2d">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NTB-23-gLt">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="NTB-23-gLt">
                                 <rect key="frame" x="45" y="288" width="230" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="btn-ninmukaisi">
                                     <color key="titleColor" red="0.52375720743291554" green="0.11254231917130897" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="tyukyu:" destination="5pf-dr-yOb" eventType="touchUpInside" id="vdf-nv-dt2"/>
-                                    <segue destination="GnH-TG-hrw" kind="presentation" id="VPm-Pi-wOP"/>
+                                    <segue destination="GnH-TG-hrw" kind="modal" id="VPm-Pi-wOP"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dlm-6C-c0a" colorLabel="IBBuiltInLabel-Red">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="dlm-6C-c0a" colorLabel="IBBuiltInLabel-Red">
                                 <rect key="frame" x="45" y="134" width="230" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="btn-ninmukaisi">
                                     <color key="titleColor" red="0.098450452603025873" green="0.60017822418155609" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="syokyu:" destination="5pf-dr-yOb" eventType="touchUpInside" id="yF6-1h-TDh"/>
-                                    <segue destination="GnH-TG-hrw" kind="presentation" id="7wL-RB-zGS"/>
+                                    <segue destination="GnH-TG-hrw" kind="modal" id="7wL-RB-zGS"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ph-JE-EIc">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="4Ph-JE-EIc">
                                 <rect key="frame" x="45" y="443" width="230" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="btn-ninmukaisi">
                                     <color key="titleColor" red="1" green="0.92815112338146355" blue="0.19726111935626511" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="zyokyu:" destination="5pf-dr-yOb" eventType="touchUpInside" id="P4R-BI-P2a"/>
-                                    <segue destination="GnH-TG-hrw" kind="presentation" id="GN0-N5-tvy"/>
+                                    <segue destination="GnH-TG-hrw" kind="modal" id="GN0-N5-tvy"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -390,7 +385,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zcc-Gs-6ru" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1238" y="387"/>
+            <point key="canvasLocation" x="660.26666666666665" y="366.36000000000001"/>
         </scene>
     </scenes>
     <resources>
@@ -413,8 +408,13 @@
         <image name="sentaku_back" width="320" height="568"/>
         <image name="title_back_01" width="320" height="568"/>
     </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="4Hh-TK-hzH"/>
         <segue reference="b6Q-g6-kxj"/>
-        <segue reference="gKS-T9-5fE"/>
     </inferredMetricsTieBreakers>
 </document>

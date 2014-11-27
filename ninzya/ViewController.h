@@ -14,6 +14,7 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *backImageView;
 @property (weak, nonatomic) IBOutlet UIButton *myButton;
+@property Sound *opsound;
 
 @end
 

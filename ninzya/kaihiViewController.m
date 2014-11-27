@@ -13,17 +13,22 @@
 @end
 
 @implementation kaihiViewController{
-AppDelegate *app; //変数管理
+    AppDelegate *app; //変数管理
+    Sound *mySound; //音源クラスのインスタンス
 }
 - (void)viewDidLoad {
     app = [[UIApplication sharedApplication] delegate]; //変数管理のデリゲート
+    mySound = [[Sound alloc]init]; //音源クラスのインスタンス初期化
+
     [super viewDidLoad];
+    [mySound soundkaihi];
     self.returnBtn.hidden = YES;
     
     //ポイントをUserDefaultsで保存
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSNumber *num = [NSNumber numberWithInt:app.point];
     [defaults setObject:num forKey:@"ポイント"];
+    [mySound soundkaihi];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -48,11 +53,11 @@ AppDelegate *app; //変数管理
 }
 
 - (void)viewDidAppear:(BOOL)animated{
-//    //経過時間（app.time）がクリア時間（cleartime）をこえていた場合はsucsesssegueを実行
-//    if (app.time >= app.cleartime) {
-//        //攻略へボタン隠したほうが良さげ
-//        [self performSegueWithIdentifier:@"sucsesssegue" sender:self];
-//    }
+    //    //経過時間（app.time）がクリア時間（cleartime）をこえていた場合はsucsesssegueを実行
+    //    if (app.time >= app.cleartime) {
+    //        //攻略へボタン隠したほうが良さげ
+    //        [self performSegueWithIdentifier:@"sucsesssegue" sender:self];
+    //    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -61,14 +66,14 @@ AppDelegate *app; //変数管理
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 -(void)action{
     self.backImageView.image = [UIImage imageNamed:@"kaihiBack27.png"];
@@ -76,13 +81,15 @@ AppDelegate *app; //変数管理
 }
 
 - (IBAction)btnKouryaku:(UIButton *)sender {
-        //経過時間（app.time）がクリア時間（cleartime）をこえていた場合はsucsesssegueを実行
-        if (app.time >= app.cleartime) {
-            //攻略へボタン隠したほうが良さげ
-            [self performSegueWithIdentifier:@"sucsesssegue" sender:self];
-        }else{
-            [self performSegueWithIdentifier:@"kaihiToSyokyu" sender:self];
-        }
-
+    //経過時間（app.time）がクリア時間（cleartime）をこえていた場合はsucsesssegueを実行
+    if (app.time >= app.cleartime) {
+        //攻略へボタン隠したほうが良さげ
+        [mySound soundkaihiStop];
+        [self performSegueWithIdentifier:@"sucsesssegue" sender:self];
+    }else{
+        [mySound soundkaihiStop];
+        [self performSegueWithIdentifier:@"kaihiToSyokyu" sender:self];
+    }
+    
 }
 @end

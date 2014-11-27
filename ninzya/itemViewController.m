@@ -14,34 +14,37 @@
 
 @implementation itemViewController{
     AppDelegate *app; //変数管理
+    Sound *mySound; //音源クラスのインスタンス
     int itemselect;
 }
 
 
 - (void)viewDidLoad
-    {
-        app = [[UIApplication sharedApplication] delegate]; //変数管理のデリゲート
-        
-        [super viewDidLoad];
-        //アイテムを使うボタンは隠しておく
-        self.itemUsebtn.hidden = YES;
-        
-        //使用中のアイテムのボタンは半透明にして使用不能にする
-        if (app.bunshin == YES) {
-            self.item1btn.enabled = NO;
-            self.item1btn.alpha = 0.5;
-        }
-        if (app.renkin == YES) {
-            self.item2btn.enabled = NO;
-            self.item2btn.alpha = 0.5;
-        }
-        if (app.kakuremi == YES) {
-            self.item3btn.enabled = NO;
-            self.item3btn.alpha = 0.5;
-        }
-
+{
+    app = [[UIApplication sharedApplication] delegate]; //変数管理のデリゲート
+    mySound = [[Sound alloc]init]; //音源クラスのインスタンス初期化
+    [mySound sounditem];
+    
+    [super viewDidLoad];
+    //アイテムを使うボタンは隠しておく
+    self.itemUsebtn.hidden = YES;
+    
+    //使用中のアイテムのボタンは半透明にして使用不能にする
+    if (app.bunshin == YES) {
+        self.item1btn.enabled = NO;
+        self.item1btn.alpha = 0.5;
+    }
+    if (app.renkin == YES) {
+        self.item2btn.enabled = NO;
+        self.item2btn.alpha = 0.5;
+    }
+    if (app.kakuremi == YES) {
+        self.item3btn.enabled = NO;
+        self.item3btn.alpha = 0.5;
     }
     
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -53,6 +56,7 @@
     //アイテム使用ボタンを表示し、イメージビューにアイテム１の画像を表示
     self.itemUsebtn.hidden = NO;
     self.itemImageVIew.image = [UIImage imageNamed:@"itemImage02.png"];
+    [mySound sounditembutton];
 }
 
 //item2のボタン
@@ -61,6 +65,7 @@
     self.itemUsebtn.hidden = NO;
     self.itemImageVIew.hidden =NO;
     self.itemImageVIew.image = [UIImage imageNamed:@"itemImage03.png"];
+    [mySound sounditembutton];
 }
 
 //item3のボタン
@@ -69,10 +74,12 @@
     self.itemUsebtn.hidden = NO;
     self.itemImageVIew.hidden =NO;
     self.itemImageVIew.image = [UIImage imageNamed:@"itemImage04.png"];
+    [mySound sounditembutton];
 }
 
 //item使用ボタン
 - (IBAction)itemUsebtn:(UIButton *)sender {
+    [mySound sounditemkounyu];
     if(itemselect == 1){
         NSLog(@"アイテム1を使った");
         if(app.point >= 100){
@@ -146,6 +153,7 @@
                           delegate:self
                           cancelButtonTitle:@"OK"
                           otherButtonTitles:nil];
+    [mySound sounditemStop];
     [alert show];
 }
 @end

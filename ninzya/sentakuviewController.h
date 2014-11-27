@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h" //変数管理
+#import "Sound.h" //音源クラス
+#import "ViewController.h"
 @interface sentakuviewController : UIViewController
 - (IBAction)syokyu:(id)sender;
 - (IBAction)tyukyu:(id)sender;

@@ -25,14 +25,27 @@
 		65974F101A1DB2540077CBB7 /* kaihiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65974F0F1A1DB2540077CBB7 /* kaihiViewController.m */; };
 		F404100B1A1FAAFB0020771F /* failViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F404100A1A1FAAFB0020771F /* failViewController.m */; };
 		F40410111A1FB9820020771F /* prologueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F40410101A1FB9820020771F /* prologueViewController.m */; };
-		F425B66D1A1DC57F0051BD12 /* katana-slash5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F425B66C1A1DC57F0051BD12 /* katana-slash5.mp3 */; };
-		F42DBBDA1A20824D0074DB64 /* Byousin01-1L.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F42DBBD91A20824D0074DB64 /* Byousin01-1L.mp3 */; };
 		F42DBBDD1A2085E70074DB64 /* Sound.m in Sources */ = {isa = PBXBuildFile; fileRef = F42DBBDC1A2085E70074DB64 /* Sound.m */; };
-		F42DBBDF1A20883F0074DB64 /* silent.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F42DBBDE1A20883F0074DB64 /* silent.mp3 */; };
 		F44D5ABE1A256B56007641D4 /* iPhoneOld.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F44D5ABD1A256B56007641D4 /* iPhoneOld.storyboard */; };
-		F44D5AC21A256C49007641D4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F44D5ABF1A256C49007641D4 /* Default-568h@2x.png */; };
-		F44D5AC31A256C49007641D4 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = F44D5AC01A256C49007641D4 /* Default.png */; };
-		F44D5AC41A256C49007641D4 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F44D5AC11A256C49007641D4 /* Default@2x.png */; };
+		F4728A7E1A26C0DC00BFC9F5 /* dash-fallen-leaves1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F4728A6F1A26C0DC00BFC9F5 /* dash-fallen-leaves1.mp3 */; };
+		F4728A7F1A26C0DC00BFC9F5 /* highspeed-movement1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F4728A701A26C0DC00BFC9F5 /* highspeed-movement1.mp3 */; };
+		F4728A801A26C0DC00BFC9F5 /* itemkounyuu.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F4728A711A26C0DC00BFC9F5 /* itemkounyuu.mp3 */; };
+		F4728A811A26C0DC00BFC9F5 /* itemsenntakukounyuu.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F4728A721A26C0DC00BFC9F5 /* itemsenntakukounyuu.mp3 */; };
+		F4728A821A26C0DC00BFC9F5 /* jump1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F4728A731A26C0DC00BFC9F5 /* jump1.mp3 */; };
+		F4728A831A26C0DC00BFC9F5 /* katana-slash5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F4728A741A26C0DC00BFC9F5 /* katana-slash5.mp3 */; };
+		F4728A841A26C0DC00BFC9F5 /* mitukatta.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F4728A751A26C0DC00BFC9F5 /* mitukatta.mp3 */; };
+		F4728A851A26C0DC00BFC9F5 /* Ninja Weapon Selection (Tenchu 3 Soundtrack) - from YouTube.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F4728A761A26C0DC00BFC9F5 /* Ninja Weapon Selection (Tenchu 3 Soundtrack) - from YouTube.mp3 */; };
+		F4728A861A26C0DC00BFC9F5 /* opening.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F4728A771A26C0DC00BFC9F5 /* opening.mp3 */; };
+		F4728A871A26C0DC00BFC9F5 /* setup1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F4728A781A26C0DC00BFC9F5 /* setup1.mp3 */; };
+		F4728A881A26C0DC00BFC9F5 /* silent.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F4728A791A26C0DC00BFC9F5 /* silent.mp3 */; };
+		F4728A891A26C0DC00BFC9F5 /* sinonndesou.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F4728A7A1A26C0DC00BFC9F5 /* sinonndesou.mp3 */; };
+		F4728A8A1A26C0DC00BFC9F5 /* sironogamen.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F4728A7B1A26C0DC00BFC9F5 /* sironogamen.mp3 */; };
+		F4728A8B1A26C0DC00BFC9F5 /* tatakattesou.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F4728A7C1A26C0DC00BFC9F5 /* tatakattesou.mp3 */; };
+		F4728A8C1A26C0DC00BFC9F5 /* wahuonngenn.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F4728A7D1A26C0DC00BFC9F5 /* wahuonngenn.mp3 */; };
+		F4728A921A26C86500BFC9F5 /* harugakita.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F4728A911A26C86500BFC9F5 /* harugakita.mp3 */; };
+		F4728A951A26CA9000BFC9F5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F4728A931A26CA9000BFC9F5 /* Default-568h@2x.png */; };
+		F4728A961A26CA9000BFC9F5 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F4728A941A26CA9000BFC9F5 /* Default@2x.png */; };
+		F4AFB0D21A2642BF0058BCB0 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = F4AFB0CF1A2642BF0058BCB0 /* Default.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,15 +90,28 @@
 		F404100A1A1FAAFB0020771F /* failViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = failViewController.m; sourceTree = "<group>"; };
 		F404100F1A1FB9820020771F /* prologueViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = prologueViewController.h; sourceTree = "<group>"; };
 		F40410101A1FB9820020771F /* prologueViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = prologueViewController.m; sourceTree = "<group>"; };
-		F425B66C1A1DC57F0051BD12 /* katana-slash5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "katana-slash5.mp3"; sourceTree = "<group>"; };
-		F42DBBD91A20824D0074DB64 /* Byousin01-1L.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Byousin01-1L.mp3"; sourceTree = "<group>"; };
 		F42DBBDB1A2085E70074DB64 /* Sound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sound.h; sourceTree = "<group>"; };
 		F42DBBDC1A2085E70074DB64 /* Sound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sound.m; sourceTree = "<group>"; };
-		F42DBBDE1A20883F0074DB64 /* silent.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = silent.mp3; sourceTree = "<group>"; };
 		F44D5ABD1A256B56007641D4 /* iPhoneOld.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhoneOld.storyboard; sourceTree = "<group>"; };
-		F44D5ABF1A256C49007641D4 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../../../../Downloads/Default/Default-568h@2x.png"; sourceTree = "<group>"; };
-		F44D5AC01A256C49007641D4 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../../../../Downloads/Default/Default.png; sourceTree = "<group>"; };
-		F44D5AC11A256C49007641D4 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../../../../Downloads/Default/Default@2x.png"; sourceTree = "<group>"; };
+		F4728A6F1A26C0DC00BFC9F5 /* dash-fallen-leaves1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "dash-fallen-leaves1.mp3"; sourceTree = "<group>"; };
+		F4728A701A26C0DC00BFC9F5 /* highspeed-movement1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "highspeed-movement1.mp3"; sourceTree = "<group>"; };
+		F4728A711A26C0DC00BFC9F5 /* itemkounyuu.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = itemkounyuu.mp3; sourceTree = "<group>"; };
+		F4728A721A26C0DC00BFC9F5 /* itemsenntakukounyuu.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = itemsenntakukounyuu.mp3; sourceTree = "<group>"; };
+		F4728A731A26C0DC00BFC9F5 /* jump1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = jump1.mp3; sourceTree = "<group>"; };
+		F4728A741A26C0DC00BFC9F5 /* katana-slash5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "katana-slash5.mp3"; sourceTree = "<group>"; };
+		F4728A751A26C0DC00BFC9F5 /* mitukatta.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = mitukatta.mp3; sourceTree = "<group>"; };
+		F4728A761A26C0DC00BFC9F5 /* Ninja Weapon Selection (Tenchu 3 Soundtrack) - from YouTube.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Ninja Weapon Selection (Tenchu 3 Soundtrack) - from YouTube.mp3"; sourceTree = "<group>"; };
+		F4728A771A26C0DC00BFC9F5 /* opening.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = opening.mp3; sourceTree = "<group>"; };
+		F4728A781A26C0DC00BFC9F5 /* setup1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = setup1.mp3; sourceTree = "<group>"; };
+		F4728A791A26C0DC00BFC9F5 /* silent.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = silent.mp3; sourceTree = "<group>"; };
+		F4728A7A1A26C0DC00BFC9F5 /* sinonndesou.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sinonndesou.mp3; sourceTree = "<group>"; };
+		F4728A7B1A26C0DC00BFC9F5 /* sironogamen.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sironogamen.mp3; sourceTree = "<group>"; };
+		F4728A7C1A26C0DC00BFC9F5 /* tatakattesou.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tatakattesou.mp3; sourceTree = "<group>"; };
+		F4728A7D1A26C0DC00BFC9F5 /* wahuonngenn.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = wahuonngenn.mp3; sourceTree = "<group>"; };
+		F4728A911A26C86500BFC9F5 /* harugakita.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = harugakita.mp3; sourceTree = "<group>"; };
+		F4728A931A26CA9000BFC9F5 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		F4728A941A26CA9000BFC9F5 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		F4AFB0CF1A2642BF0058BCB0 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,12 +192,25 @@
 		655C22461A118E7C00A0426C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				F44D5ABF1A256C49007641D4 /* Default-568h@2x.png */,
-				F44D5AC01A256C49007641D4 /* Default.png */,
-				F44D5AC11A256C49007641D4 /* Default@2x.png */,
-				F42DBBD91A20824D0074DB64 /* Byousin01-1L.mp3 */,
-				F42DBBDE1A20883F0074DB64 /* silent.mp3 */,
-				F425B66C1A1DC57F0051BD12 /* katana-slash5.mp3 */,
+				F4728A6F1A26C0DC00BFC9F5 /* dash-fallen-leaves1.mp3 */,
+				F4728A701A26C0DC00BFC9F5 /* highspeed-movement1.mp3 */,
+				F4728A911A26C86500BFC9F5 /* harugakita.mp3 */,
+				F4728A711A26C0DC00BFC9F5 /* itemkounyuu.mp3 */,
+				F4728A721A26C0DC00BFC9F5 /* itemsenntakukounyuu.mp3 */,
+				F4728A731A26C0DC00BFC9F5 /* jump1.mp3 */,
+				F4728A741A26C0DC00BFC9F5 /* katana-slash5.mp3 */,
+				F4728A751A26C0DC00BFC9F5 /* mitukatta.mp3 */,
+				F4728A761A26C0DC00BFC9F5 /* Ninja Weapon Selection (Tenchu 3 Soundtrack) - from YouTube.mp3 */,
+				F4728A771A26C0DC00BFC9F5 /* opening.mp3 */,
+				F4728A781A26C0DC00BFC9F5 /* setup1.mp3 */,
+				F4728A931A26CA9000BFC9F5 /* Default-568h@2x.png */,
+				F4728A941A26CA9000BFC9F5 /* Default@2x.png */,
+				F4728A791A26C0DC00BFC9F5 /* silent.mp3 */,
+				F4728A7A1A26C0DC00BFC9F5 /* sinonndesou.mp3 */,
+				F4728A7B1A26C0DC00BFC9F5 /* sironogamen.mp3 */,
+				F4728A7C1A26C0DC00BFC9F5 /* tatakattesou.mp3 */,
+				F4728A7D1A26C0DC00BFC9F5 /* wahuonngenn.mp3 */,
+				F4AFB0CF1A2642BF0058BCB0 /* Default.png */,
 				655C22471A118E7C00A0426C /* Info.plist */,
 				655C22481A118E7C00A0426C /* main.m */,
 			);
@@ -276,16 +315,29 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4728A821A26C0DC00BFC9F5 /* jump1.mp3 in Resources */,
+				F4728A951A26CA9000BFC9F5 /* Default-568h@2x.png in Resources */,
 				655C22551A118E7C00A0426C /* Main.storyboard in Resources */,
-				F44D5AC31A256C49007641D4 /* Default.png in Resources */,
-				F44D5AC41A256C49007641D4 /* Default@2x.png in Resources */,
+				F4AFB0D21A2642BF0058BCB0 /* Default.png in Resources */,
+				F4728A841A26C0DC00BFC9F5 /* mitukatta.mp3 in Resources */,
+				F4728A891A26C0DC00BFC9F5 /* sinonndesou.mp3 in Resources */,
+				F4728A961A26CA9000BFC9F5 /* Default@2x.png in Resources */,
+				F4728A7E1A26C0DC00BFC9F5 /* dash-fallen-leaves1.mp3 in Resources */,
 				655C225A1A118E7C00A0426C /* LaunchScreen.xib in Resources */,
+				F4728A8B1A26C0DC00BFC9F5 /* tatakattesou.mp3 in Resources */,
+				F4728A831A26C0DC00BFC9F5 /* katana-slash5.mp3 in Resources */,
+				F4728A871A26C0DC00BFC9F5 /* setup1.mp3 in Resources */,
+				F4728A811A26C0DC00BFC9F5 /* itemsenntakukounyuu.mp3 in Resources */,
+				F4728A861A26C0DC00BFC9F5 /* opening.mp3 in Resources */,
+				F4728A921A26C86500BFC9F5 /* harugakita.mp3 in Resources */,
+				F4728A881A26C0DC00BFC9F5 /* silent.mp3 in Resources */,
 				655C22571A118E7C00A0426C /* Images.xcassets in Resources */,
-				F425B66D1A1DC57F0051BD12 /* katana-slash5.mp3 in Resources */,
+				F4728A801A26C0DC00BFC9F5 /* itemkounyuu.mp3 in Resources */,
+				F4728A8A1A26C0DC00BFC9F5 /* sironogamen.mp3 in Resources */,
+				F4728A8C1A26C0DC00BFC9F5 /* wahuonngenn.mp3 in Resources */,
 				F44D5ABE1A256B56007641D4 /* iPhoneOld.storyboard in Resources */,
-				F44D5AC21A256C49007641D4 /* Default-568h@2x.png in Resources */,
-				F42DBBDA1A20824D0074DB64 /* Byousin01-1L.mp3 in Resources */,
-				F42DBBDF1A20883F0074DB64 /* silent.mp3 in Resources */,
+				F4728A851A26C0DC00BFC9F5 /* Ninja Weapon Selection (Tenchu 3 Soundtrack) - from YouTube.mp3 in Resources */,
+				F4728A7F1A26C0DC00BFC9F5 /* highspeed-movement1.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +488,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				"CLANG_ENABLE_OBJC_ARC[arch=*]" = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -450,6 +503,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = NO;
 				"CLANG_ENABLE_OBJC_ARC[arch=*]" = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";

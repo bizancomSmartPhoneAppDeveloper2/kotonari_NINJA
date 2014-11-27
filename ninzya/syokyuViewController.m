@@ -27,9 +27,13 @@
     random = rand() % 10;//0～9の数値をランダムに取得 → 見つかった、見つからないの判定をするため
     
     [super viewDidLoad];
+    
+    [mySound soundsiro];
+    
     // 近接センサをONに
     if ([UIDevice currentDevice].proximityMonitoringEnabled == NO) {
         NSLog(@"センサーオン");
+        
         // 近接センサをオン
         [UIDevice currentDevice].proximityMonitoringEnabled = YES;
         // 近接センサ監視
@@ -38,7 +42,7 @@
                                                      name:UIDeviceProximityStateDidChangeNotification
                                                    object:nil];
     }
-  
+    
     //ラベルに数字を表示
     int hours = app.time/3600;
     int minutes = (app.time%3600)/60;
@@ -92,6 +96,8 @@
         [mySound soundKatana];
         [mySound soundSilent]; //無音の音声ファイルを再生し続ける
         
+        [mySound soundsiroStop];
+        
         //タイマー生成
         tm = [NSTimer scheduledTimerWithTimeInterval:1
                                               target:self
@@ -106,14 +112,14 @@
         [mySound soundSilentStop];
         [tm invalidate];
         
-            // 近接センサオフ
-            [UIDevice currentDevice].proximityMonitoringEnabled = NO;
-            // 近接センサ監視解除
-            [[NSNotificationCenter defaultCenter] removeObserver:self
-                                                            name:UIDeviceProximityStateDidChangeNotification object:nil];
+        // 近接センサオフ
+        [UIDevice currentDevice].proximityMonitoringEnabled = NO;
+        // 近接センサ監視解除
+        [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                        name:UIDeviceProximityStateDidChangeNotification object:nil];
         
         
-            //見つかった見つからない判定（viewDidLoadで発生させた乱数を元に）隠れ身の術を使用中は無条件で成功
+        //見つかった見つからない判定（viewDidLoadで発生させた乱数を元に）隠れ身の術を使用中は無条件で成功
         if (app.kakuremi == YES) {
             NSLog(@"隠れ身の術を使用して成功した");
             [self performSegueWithIdentifier:@"kaihi" sender:self]; //成功画面に移動するセグエ
@@ -153,7 +159,7 @@
             if (app.renkin == YES){
                 app.point++;
             }
-            }
+        }
     }else{
         if(app.time%120 == 0){
             app.point++;
@@ -173,6 +179,9 @@
     // 近接センサ監視解除
     [[NSNotificationCenter defaultCenter] removeObserver:self
                                                     name:UIDeviceProximityStateDidChangeNotification object:nil];
+    [mySound soundsiroStop];
+    [mySound soundbutton];
+    
 }
 
 //戻ってくるボタンのためにSegueを設定

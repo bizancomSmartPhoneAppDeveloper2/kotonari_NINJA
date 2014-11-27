@@ -14,11 +14,15 @@
 
 @implementation failViewController{
     AppDelegate *app; //変数管理
+    Sound *mySound; //音源クラスのインスタンス
 }
 
 - (void)viewDidLoad {
     app = [[UIApplication sharedApplication] delegate]; //変数管理のデリゲート
+    mySound = [[Sound alloc]init]; //音源クラスのインスタンス初期化
     [super viewDidLoad];
+    [mySound soundkaihi];
+    
     // Do any additional setup after loading the view.
     self.returnBtn.hidden = YES;
     
@@ -26,6 +30,9 @@
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSNumber *num = [NSNumber numberWithInt:app.point];
     [defaults setObject:num forKey:@"ポイント"];
+    
+    //10秒後にメソッドを実行
+    [self performSelector:@selector(soundChange) withObject:nil afterDelay:10];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -55,16 +62,21 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 -(void)action{
     self.backImageView.image = [UIImage imageNamed:@"failBack27.png"];
     self.returnBtn.hidden = NO;
+}
+
+-(void)soundChange{
+    [mySound soundkaihiStop];
+    [mySound soundmiss];
 }
 @end

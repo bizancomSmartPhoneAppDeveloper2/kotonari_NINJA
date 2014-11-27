@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Sound.h" //音源クラス
 
 @interface prologueViewController : UIViewController
 

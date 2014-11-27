@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h" //変数管理
+#import "Sound.h" //音源クラス
 
 @interface failViewController : UIViewController
 

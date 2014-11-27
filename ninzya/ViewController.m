@@ -23,6 +23,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     self.myButton.hidden = YES;
+    app.opsound = [[Sound alloc]init];
+    [app.opsound soundOpening];
 
     //1.5秒後にメソッドを実行
     [self performSelector:@selector(backChange) withObject:nil afterDelay:1.5];

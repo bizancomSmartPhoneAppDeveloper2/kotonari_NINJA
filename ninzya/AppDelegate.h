@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
+#import "Sound.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
@@ -42,6 +43,8 @@
 @property BOOL bunshin;
 @property BOOL renkin;
 @property BOOL kakuremi;
+//オープニング用のサウンドの変数
+@property Sound *opsound;
 
 @end
 
